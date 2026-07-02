@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "watch2gether-mobile",
+    "slug": "watch2gether-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Watch2Gether needs access to your microphone for real-time voice chat with other participants in the room.",
+        "NSCameraUsageDescription": "Watch2Gether needs access to your camera to broadcast your live video feed to the room."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.xerokaizen.watch2gethermobile",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#050505",
+      "hidden": true,
+      "translucent": true
+    },
+    "plugins": [
+      "expo-video",
+      "./plugins/withScreenShare",
+      "./plugins/withMainActivity"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3544bcf1-5d9b-473f-98de-696bab513eef"
+      }
+    }
+  }
+}
